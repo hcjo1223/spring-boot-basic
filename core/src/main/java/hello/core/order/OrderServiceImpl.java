@@ -4,7 +4,7 @@ import hello.core.discount.DiscountPolicy;
 import hello.core.member.Member;
 import hello.core.member.MemberRepository;
 
-public class OrderServiceImpl implements OrderSerivce{
+public class OrderServiceImpl implements OrderService {
 
     //순수하게 인터페이스만 의존.
     //OrderServiceImpl입장에서 생성자를 통해 어떤 객체가 들어올지 알 수 없다.

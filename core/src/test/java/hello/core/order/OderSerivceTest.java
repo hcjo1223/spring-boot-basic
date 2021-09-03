@@ -11,13 +11,13 @@ import org.junit.jupiter.api.Test;
 public class OderSerivceTest {
 
     MemberService memberService;
-    OrderSerivce orderSerivce;
+    OrderService orderService;
 
     @BeforeEach
     public void beforeEach() {
         AppConfig appConfig = new AppConfig();
         memberService = appConfig.memberService();
-        orderSerivce = appConfig.orderSerivce();
+        orderService = appConfig.orderService();
     }
 
 
@@ -29,7 +29,7 @@ public class OderSerivceTest {
 
         //when
         memberService.join(member);
-        Order order = orderSerivce.createOrder(memberId, "itemA", 10000);
+        Order order = orderService.createOrder(memberId, "itemA", 10000);
 
         //then
         Assertions.assertThat(order.getDiscountPrice()).isEqualTo(1000);
