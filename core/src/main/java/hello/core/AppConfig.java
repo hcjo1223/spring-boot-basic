@@ -40,6 +40,7 @@ public class AppConfig {
     public OrderService orderService() {
         System.out.println("call AppConfig.orderService");
         return new OrderServiceImpl(memberRepository(), discountPolicy());
+//        return null; // 3. 필드 주입
     }
 
     @Bean
